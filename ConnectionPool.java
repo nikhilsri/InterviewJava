@@ -60,7 +60,9 @@ class TakeAndReturnConnection implements ConnectionPool{
 				connectionList.add(conn);
 				//can provide success log
 				this.poolSize++;
+				takenFromPoolMap.remove(conn);
 			}
+			
 		}else{
 			//can provide failure log
 		}
